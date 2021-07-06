@@ -1,5 +1,4 @@
 let sentence = "The movie is not that bad, I like it";
-sentenceArray = sentence.split(" ");
 let wordNot = sentence.indexOf("not");
 let wordBad = sentence.indexOf("bad");
 
@@ -12,7 +11,3 @@ if(wordBad > wordNot && wordNot != -1){
 }else{
     console.log(sentence);
 }
-
-
-    
-
