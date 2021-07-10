@@ -1,3 +1,8 @@
+
+let num2 =;
+let mySign = "";
+
+
 function number(num){
     document.getElementById("screen").innerHTML = document.getElementById("screen").innerHTML + num;
 }
@@ -15,15 +20,22 @@ function myClear(){
 }
 
 function operator(sign){
-    switch(sign){
-        case "+":
-            break;
-        case "-":
-            break;
-        case "*":
-            break;
-        case "/":
-            break;
+    let numSum = 0;
+    if(document.getElementById("screen").innerHTML == undefined || document.getElementById("screen").innerHTML == null || document.getElementById("screen").innerHTML == ""){
+        alert("have to make some input");
+        return;
+    }else{
+        switch(sign){
+            case "+":
+            num2 = Number(document.getElementById("screen").innerHTML); 
+                break;
+            case "-":
+                break;
+            case "*":
+                break;
+            case "/":
+                break;
+        }
     }
 }
 
