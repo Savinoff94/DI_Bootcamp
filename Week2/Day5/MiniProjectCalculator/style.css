@@ -1,0 +1,133 @@
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    background-color: #83858C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator{
+    width: 50%;
+    height: 90%;
+    border-radius: 10%;
+    background-color: #CFB1B7;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 2fr, 2fr, 1fr, 1fr, 1fr, 1fr, 1fr, 2fr;
+
+    grid-template-areas:
+    "myScreen myScreen myScreen myScreen myScreen myScreen myScreen myScreen myScreen myScreen" 
+    "myNum1 myNum1 myNum2 myNum2 myNum3 myNum3 myPlus myPlus myMinus myMinus" 
+    "myNum4 myNum4 myNum5 myNum5 myNum6 myNum6 myPlus myPlus myMinus myMinus"
+    "myNum4 myNum4 myNum5 myNum5 myNum6 myNum6 myMultiplication myMultiplication myDivision myDivision"
+    "myNum7 myNum7 myNum8 myNum8 myNum9 myNum9 myMultiplication myMultiplication myDivision myDivision"
+    "myNum7 myNum7 myNum8 myNum8 myNum9 myNum9 myMultiplication myMultiplication myDivision myDivision"
+    "myNum0 myNum0 myNum0 myNum0 myNum0 myNum0 myEqual myEqual myEqual myEqual"
+    "myReset myReset myReset myReset myReset myReset myClear myClear myClear myClear";
+}
+
+/* .bor{
+    border: solid black 3px;
+} */
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+}
+
+.screen{
+    grid-area: myScreen;
+    
+}
+
+.equal{
+    grid-area: myEqual;
+    
+}
+
+.num0{
+    grid-area: myNum0;
+    
+}
+
+.num1{
+    grid-area: myNum1;
+    
+}
+
+.num2{
+    grid-area: myNum2;
+}
+
+.num3{
+    grid-area: myNum3;
+}
+
+.num4{
+    grid-area: myNum4;
+}
+
+.num5{
+    grid-area: myNum5;
+}
+
+.num6{
+    grid-area: myNum6;
+}
+
+.num7{
+    grid-area: myNum7;
+}
+
+.num8{
+    grid-area: myNum8;
+}
+
+.num9{
+    grid-area: myNum9;
+}
+
+.plus{
+    grid-area: myPlus;
+}
+
+.minus{
+    grid-area: myMinus;
+}
+
+.multiplication{
+    grid-area: myMultiplication;
+}
+
+.division{
+    grid-area: myDivision;
+}
+
+.reset{
+    grid-area: myReset;
+}
+
+.clear{
+    grid-area: myClear;
+}
+
+button{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    margin: 0.1%;
+}

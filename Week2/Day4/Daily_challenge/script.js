@@ -4,19 +4,19 @@ function rowLength(arr) {
     if(arrItem.length > longestWord){
         longestWord = arrItem.length;
     }
-    return longestWord;
     }
+    return longestWord;
 }
 
 
 function drawer(number, arr){
     let space = " ";
     let star = "*";
-    console.log(star.repeat(number + 2));
+    console.log(star.repeat(number + 4));
     for(word of arr){
-    console.log("*" + word + space.repeat(number - word.length) + "*");
+    console.log("* " + word + space.repeat(number - word.length) + " *");
     }
-    console.log(star.repeat(number + 2));
+    console.log(star.repeat(number + 4));
 }
 
 
