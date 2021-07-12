@@ -27,7 +27,7 @@ function operator(sign){
     }else{
         switch(sign){
             case "+":
-            num2 = Number(document.getElementById("screen").innerHTML); 
+            num2 = Number(document.getElementById("screen").textContent); 
                 break;
             case "-":
                 break;
