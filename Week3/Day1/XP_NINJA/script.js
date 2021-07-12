@@ -1,9 +1,27 @@
-let week = ["MO", "TU", "WE", "TH", "FR", "ST", "SU" ];
+const date = new Date(2018, 5);
 
+let week = ["MO", "TU", "WE", "TH", "FR", "ST", "SU" ];
+let months = {
+    Feb : [28, 29],
+    Mar : 31,
+    Apr : 30,
+    May : 31,
+    Jun : 30,
+    Jul : 31,
+    Aug : 31,
+    Sep : 30,
+    Oct : 31,
+    Nov : 30,
+    Dec : 31,
+    Jan : 31
+};
 let table = document.createElement("table");
 
 
-const date = new Date(2018, 11);
+// date and day of the week 
+
+
+console.log(new Date(2018, 12));
 console.log(date);
 const day = date.getDay();
 console.log(day);
