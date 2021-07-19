@@ -31,7 +31,7 @@ let total = 0;
 gameInfo.forEach(function(item){
     let item1 = item["username"] + "!";
     arrNames.push(item1);
-    (item["score"] > 5) ? arrNames5.push(item["username"]) : console.log();
+    (item["score"] > 5) ? arrNames5.push(item["username"]) : null;
     total += item["score"];
 })
 console.log(total);
