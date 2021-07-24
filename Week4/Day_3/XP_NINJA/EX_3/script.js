@@ -47,7 +47,7 @@ data.map(function(item){
         years += item["age"];
     }
 })
-console.log(years);
+console.log(years * 7);
 
 years = 0;
 
@@ -62,4 +62,4 @@ function reducer(accumulator,item){
     }
 
 }
-console.log(years);
+console.log(years * 7);
