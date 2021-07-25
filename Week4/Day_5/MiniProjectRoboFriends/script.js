@@ -107,13 +107,22 @@ function renderTemlate(obj){
     div.style.width = "354px";
     div.style.paddingTop = "10px"
     div.style.borderRadius = "10%";
-    if(obj.length == 1){
-      div.style.alignSelf = "end";
-    }
-    if(counter % 2 != 0){
-      div.style.justifySelf = "end";
-    }else{
-      div.style.justifySelf = "start";
+    div.style.alignSelf = "start";
+    if(obj.length % 2 == 0){
+      if(counter % 2 != 0){
+        div.style.justifySelf = "end";
+      }else{
+        div.style.justifySelf = "start";
+      }  
+    }else if(obj.length % 3 == 0){
+      if(counter == 1){
+        div.style.justifySelf = "end";
+      }else if(counter == 2){
+        div.style.justifySelf = "center";
+      }else if(counter == 3){
+        counter = 1;
+        div.style.justifySelf = "start";
+      }  
     }
     ++counter;
 

@@ -1,0 +1,32 @@
+html, body
+{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+}
+
+h1{
+    margin: 0;
+}
+
+.tic-tac{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table{
+    height: 50%;
+    width: 50%;
+}
