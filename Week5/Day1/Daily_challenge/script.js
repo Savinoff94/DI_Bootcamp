@@ -10,18 +10,5 @@ function mySubmit(event){
     obj = JSON.stringify(obj,null,2);
     console.log(obj);
 
-    fetch('index.html', {
-    method: 'POST', // or 'PUT'
-    headers: {
-    'Content-Type': 'application/json',
-    },
-    body: obj,
-    })
-    .then(response => response.json())
-    .then(obj => {
-    console.log('Success:', obj);
-    })
-    .catch((error) => {
-    console.error('Error:', error);
-    });
+    document.getElementsByClassName("container")[0].innerHTML = obj;
 }
