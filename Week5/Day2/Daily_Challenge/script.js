@@ -1,8 +1,8 @@
 
 
-let getGifs = function (event){
+let getGifs = (function (event){
 	let counter = 1;
-	function inner(){
+	function inner(event){
 		event.preventDefault();
 		let valueInput = event.target.elements["input"].value;
 		let offset = "&offset=" + counter;
@@ -35,9 +35,9 @@ let getGifs = function (event){
 			//   displayError(xhr)
 		};
 	}
-	return inner();
+	return inner;
 
-}
+})()
 
 let form = document.forms[0];
 form.addEventListener("submit", getGifs);
@@ -47,11 +47,18 @@ form.addEventListener("submit", getGifs);
 
 const displayUser = (data, index) => {
 	for(gif of data){
+		let div = document.createElement("div");
 		let img = document.createElement("img");
 		img.setAttribute("id",`gif${index}`)
 		img.setAttribute("src", gif["images"]["fixed_height"]["url"]);
 		img.style.height = "200px";
-		document.getElementById("container").appendChild(img);
+		let button = document.createElement("button");
+		let text = document.createTextNode("Delete");
+		button.appendChild(text);
+		div.appendChild(img);
+		div.appendChild(button);
+		button.addEventListener("click", deleter);
+		document.getElementById("container").appendChild(div);
 
 	}
 }
@@ -64,4 +71,8 @@ document.getElementById("delete").addEventListener("click", deleteEverything);
 
 function deleteEverything(){
 	document.getElementById("container").innerHTML = "";
+}
+
+function deleter(event){
+	event.target.parentElement.remove();
 }

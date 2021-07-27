@@ -37,6 +37,7 @@ function getGifs(event){
 
 
 const displayUser = (data) => {
+	console.log(data);
 	for(gif of data){
 		let img = document.createElement("img");
 		img.setAttribute("src", gif["images"]["fixed_height"]["url"]);
