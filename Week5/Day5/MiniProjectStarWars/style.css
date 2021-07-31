@@ -1,0 +1,77 @@
+html, body
+{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("wallaper.jpg");
+}
+h1{
+    font-family: 'Press Start 2P', cursive;
+    color: gold;
+}
+h2{
+    font-family: 'Press Start 2P', cursive;
+    color: gold;
+}
+p{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 110px;
+    margin: 15px;
+    color: gold;
+}
+
+.header{
+    width: 50%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    background-color: gold;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.personCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 60%;
+    border: 4px yellow solid;
+    border-radius: 10px;
+}
+
+button{
+    border-radius: 5px;
+}
+
+#loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid gold;
+    border-bottom: 16px solid gold;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
