@@ -16,13 +16,16 @@ document.getElementById("myButton").addEventListener('click',async (event) => {
     let obj = await loadData("http://api.currencylayer.com/live?access_key=6b543e9294a71d26a6606f5449cf71a6&format=1");
     if(from == "USD"){
         let answer = amount * obj["quotes"][`USD${to}`];
-        document.getElementById("output").innerText = answer.toLocaleString(undefined,{ minimumFractionDigits: 1 });
+        // document.getElementById("output").innerText = answer.toLocaleString(undefined,{ minimumFractionDigits: 1 });
+        document.getElementById("output").innerText = answer.toFixed(2);
     }else if(to == "USD"){
         let answer = amount / obj["quotes"][`USD${from}`];
-        document.getElementById("output").innerText = answer.toLocaleString(undefined,{ minimumFractionDigits: 1 });
+        // document.getElementById("output").innerText = answer.toLocaleString(undefined,{ minimumFractionDigits: 1 });
+        document.getElementById("output").innerText = answer.toFixed(2);
     }else{
         let answer =amount / obj["quotes"][`USD${from}`] * obj["quotes"][`USD${to}`];
-        document.getElementById("output").innerText = answer.toLocaleString(undefined,{ minimumFractionDigits: 1 });
+        // document.getElementById("output").innerText = answer.toLocaleString(undefined,{ minimumFractionDigits: 1 });
+        document.getElementById("output").innerText = answer.toFixed(2);
     }
 });
 
